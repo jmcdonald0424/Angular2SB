@@ -1,0 +1,6 @@
+<input #name /><button (click)="clicked(name)">Submit</button>
+<table>
+    <tr *ngFor="let user of sandboxUsers">
+        <td>{{ user.userId }}</td><td>{{ user.username }}</td><td (click)="deleteUser(user)" style="cursor: pointer; color: red;">X</td>
+    </tr>
+</table>

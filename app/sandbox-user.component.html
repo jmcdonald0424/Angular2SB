@@ -1,6 +1,9 @@
-<input #name /><button (click)="clicked(name)">Submit</button>
-<table>
-    <tr *ngFor="let user of sandboxUsers">
-        <td>{{ user.userId }}</td><td>{{ user.username }}</td><td (click)="deleteUser(user)" style="cursor: pointer; color: red;">X</td>
-    </tr>
-</table>
+<div class="form-group">
+    <label for="username" class="sr-only">Username:</label>
+    <input #name type="text" class="form-control" id="username" /><button (click)="clicked(name)" type="submit" class="btn btn-primary">Submit</button>
+    <table class="table">
+        <tr *ngFor="let user of sandboxUsers">
+            <td>{{ user.userId }}</td><td>{{ user.username }}</td><td (click)="deleteUser(user)" style="cursor: pointer; color: red;">X</td>
+        </tr>
+    </table>
+</div>
